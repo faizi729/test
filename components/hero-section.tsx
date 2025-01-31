@@ -5,6 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import yamya from "./img/hero.png";
 import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 
 export function HeroSection() {
   const [email, setEmail] = useState("");
@@ -38,13 +39,28 @@ export function HeroSection() {
           </motion.h1>
 
           <motion.p
-            className="mt-6 text-lg text-gray-300"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            We transform ideas into powerful digital solutions. Our expert team delivers cutting-edge software development, mobile applications, and enterprise solutions.
-          </motion.p>
+                  className="mt-6 text-lg text-gray-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                >
+                  We transform ideas into powerful digital solutions. Our expert team delivers{" "}
+                  <span className="text-white font-semibold">
+                    <Typewriter
+                      options={{
+                        strings: [
+                          "Software Development.",
+                          "Mobile Applications.",
+                          "Enterprise Solutions.",
+                        ],
+                        autoStart: true,
+                        loop: true,
+                        delay: 50,
+                        deleteSpeed: 30,
+                      }}
+                    />
+                 </span>
+           </motion.p>
         </motion.div>
 
         {/* Right Side Image with Floating Animation */}
