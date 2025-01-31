@@ -7,6 +7,7 @@ import {
 import { useState } from "react";
 import Image from "next/image";
 import pr from './img/programing.png';
+import { motion } from "framer-motion";
 
 const categories = ['Frameworks', 'Database', 'Languages', 'CMS', 'Others'];
 const skills = [
@@ -95,25 +96,31 @@ export function SkillsSection() {
         <p className="text-gray-600 text-lg font-medium mb-4">Key Technologies under <span className="font-bold text-blue-600">{selectedCategory}</span>:</p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-full">
+         
           {selectedSkill?.technologies.map((tech) => (
-            <Card key={tech.name} className="shadow-md cursor-pointer border p-2 hover:shadow-lg transition-all duration-300 "
-            style={{ transition: "background-color 0.3s" }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = tech.color;
-              
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "white";
-              
-            }}
+            <motion.div
+            key={tech.name}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.7 }}
+            className="group transition-all duration-150"
+          >
+            <Card className="shadow-md border p-3 cursor-pointer transition-all duration-300 group-hover:bg-opacity-80"
+               style={{ transition: "background-color 0.3s" }}
+               onMouseEnter={(e) => {
+                 e.currentTarget.style.backgroundColor = tech.color;
+                 
+               }}
+               onMouseLeave={(e) => {
+                 e.currentTarget.style.backgroundColor = "white";
+                 
+               }}
             >
-              <CardHeader className="flex flex-col items-center justify-center">
-                
-                  <Image src={tech.image} width={60} height={60} alt={tech.name} className="mx-auto" />
-                
-                <CardTitle className="text-sm font-semibold text-center mt-2">{tech.name}</CardTitle>
+              <CardHeader className="flex flex-col items-center">
+                <Image src={tech.image} width={60} height={60} alt={tech.name} className="mx-auto" />
+                <CardTitle className="text-sm font-semibold text-center mt-2 text-black">{tech.name}</CardTitle>
               </CardHeader>
             </Card>
+          </motion.div>
           ))}
         </div>
       </div>
