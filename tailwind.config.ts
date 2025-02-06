@@ -9,6 +9,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+<<<<<<< HEAD
+=======
+      bebas: ["Bebas Neue", "cursive"],
+      roboto: ["Roboto", "sans-serif"],
+      poppins: ["Poppins", "sans-serif"],
+      
+>>>>>>> 0463540 (first commit)
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
