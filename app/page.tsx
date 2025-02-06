@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { HeroSection } from "@/components/hero-section";
-=======
-
->>>>>>> 0463540 (first commit)
 import { SkillsSection } from "@/components/skills-section";
 import { ServicesSection } from "@/components/services-section";
 import { ProjectsSection } from "@/components/projects-section";
@@ -11,24 +6,13 @@ import { GallerySection } from "@/components/gallery-section";
 import Testimonial from "@/components/Testimonial";
 import Chatbot from "@/components/Chatbot";
 
-<<<<<<< HEAD
-import BrandSection from "@/components/BrandSection";
-import VantaBackground from "@/components/VantaBackground";
-=======
 
 import BrandSection from "@/components/BrandSection";
 
->>>>>>> 0463540 (first commit)
 
 // Import WhatsApp Icon from react-icons
 import { FaWhatsapp } from "react-icons/fa";
 
-<<<<<<< HEAD
-export default function Home() {
-  return (
-    <main>
-      <VantaBackground />
-=======
 import VantaBackground from "../components/VantaBackground";
 import { HeroSection } from "@/components/hero-section";
 import Background from "@/components/Background";
@@ -41,7 +25,6 @@ export default function Home() {
   return (
     <main>
       <Background />
->>>>>>> 0463540 (first commit)
      <div className="gap-7">
      {/* <Chatbot/> */}
       {/* WhatsApp Button */}
